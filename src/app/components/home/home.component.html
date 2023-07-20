@@ -1,0 +1,29 @@
+
+
+<section class="pt-5">
+    <div class="container">
+        <div>
+            <h1>Free News here</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-5" *ngFor="let news of newsData">
+                <div class="card">
+                    <div>
+                        <img src="{{news.urlToImage}}" class="w-100" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>{{ news.title }}</h5>
+                        <br>
+                        <div>
+                        <p>{{ news.description }}</p>
+                        <p class="text-muted">Published At: {{ news.publishedAt | date }}</p>
+                        <a href="{{ news.url }}" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
